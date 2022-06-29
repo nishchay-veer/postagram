@@ -1,0 +1,29 @@
+.imagePost__upload{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid lightgray;
+    /* position: fixed; */
+    /* bottom: 0; */
+}
+.upload__caption{
+    
+    border-radius: 5px;
+    border: none;
+    background-color: #6eb8e9;
+    outline: none;
+}
+.upload__caption:hover{
+    background-color: #0095F6;
+    color: white;
+}
+.imagePost__upload > input{
+    padding: 10px;
+}
+.progress__part{
+    width: 100%;
+}
