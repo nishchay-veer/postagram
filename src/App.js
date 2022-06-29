@@ -202,7 +202,7 @@ function App() {
         </Box>
       </Modal>
       <div className="app__header">
-        <img className="app__headerImage" src="https://thumbs.dreamstime.com/b/instagram-141049465.jpg" alt="" />
+        <img className="app__headerImage" src="https://images.ctfassets.net/pjshm78m9jt4/129012_header/05b033cc745de7f12355141aaa8d0063/importedImage129012_header" alt="" />
         <div className="app__headerSearch">
 
           <input type="text" placeholder="Search" ></input>
