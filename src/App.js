@@ -202,7 +202,12 @@ function App() {
         </Box>
       </Modal>
       <div className="app__header">
-        <img className="app__headerImage" src="https://images.ctfassets.net/pjshm78m9jt4/129012_header/05b033cc745de7f12355141aaa8d0063/importedImage129012_header" alt="" />
+        <div className='images'>
+        <img className="app__headerImage1" src="https://images.ctfassets.net/pjshm78m9jt4/129012_header/05b033cc745de7f12355141aaa8d0063/importedImage129012_header" alt="" />
+        <img className="app__headerImage2" src="https://firebasestorage.googleapis.com/v0/b/postagram-4574a.appspot.com/o/images%2FWhatsApp%20Image%202022-06-29%20at%208.00.30%20PM.jpeg?alt=media&token=8487e5be-5698-44f0-b6ca-0ab2efc9aea4" alt="" />
+
+        </div>
+
         <div className="app__headerSearch">
 
           <input type="text" placeholder="Search" ></input>

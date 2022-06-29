@@ -34,10 +34,16 @@
 
 /* object-fit: contain; */
 /* width: 50vw; */
+.images{
+  align-items: center;
+}
 
-
-.app__headerImage {
+.app__headerImage1 {
   height: 50px;
+}
+.app__headerImage2 {
+  height: 60px;
+  margin-left: -10px;
 }
 
 .app__header {
