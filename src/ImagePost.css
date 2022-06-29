@@ -14,13 +14,14 @@
     
     border-radius: 5px;
     border: none;
-    background-color: #6eb8e9;
+    background-color: black;
     outline: none;
-}
-.upload__caption:hover{
-    background-color: #0095F6;
     color: white;
 }
+/* .upload__caption:hover{
+    b
+    color: white;
+} */
 .imagePost__upload > input{
     padding: 10px;
 }

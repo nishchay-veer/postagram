@@ -89,7 +89,7 @@ function Post({ postID, user, username, caption, location }) {
 
             </div>
             <img className='post__image' src={location} alt="" />
-            <div className='post__icons'>{pressedLike ? <FavoriteBorderOutlinedIcon onClick = {increaseLike}/> :<FavoriteIcon onClick = {decreaseLike}/>}  </div>
+            {user ? <div className='post__icons'>{pressedLike ? <FavoriteBorderOutlinedIcon onClick = {increaseLike}/> :<FavoriteIcon onClick = {decreaseLike}/>}</div> : null} 
             {/* <div className='post__likes'>{window.localStorage.map((item)=> (
                 <p>{item.postID} likes</p>)
             )}</div> */}

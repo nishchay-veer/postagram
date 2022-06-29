@@ -277,8 +277,9 @@ function App() {
         </div>  </div>
 
 
-
+      <div className='footer'>Copyright &copy; 2022 by Nishchay Veer and Mridul Dhiman</div>
     </div>
+
   );
 }
 
