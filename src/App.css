@@ -34,7 +34,7 @@
 
 /* object-fit: contain; */
 /* width: 50vw; */
-.images{
+.images {
   align-items: center;
 }
 
@@ -42,6 +42,7 @@
   object-fit: contain;
   width: 70px;
 }
+
 .app__headerImage2 {
   height: 60px;
   margin-left: -10px;
@@ -95,6 +96,7 @@
 }
 
 
+
 .app__headerSearch>input:focus {
   outline: none;
   border: none;
@@ -127,15 +129,16 @@
 }
 
 .form__image {
-  height: 30px;
-  width: 30px;
+  object-fit: contain;
+  width: 50px;
 }
 
 .app__posts {
   padding: 20px;
 }
+
 /* image Upload Option */
-.imagePost__upload{
+.imagePost__upload {
   display: flex;
   flex-direction: column;
   width: 60%;
@@ -147,7 +150,8 @@
   /* position: fixed; */
   /* bottom: 0; */
 }
-.upload__caption{
+
+.upload__caption {
   word-wrap: break-word;
   word-break: break-all;
   color: white;
@@ -156,21 +160,25 @@
   background-color: black;
   outline: none;
 }
+
 /* .upload__caption:hover{
   background-color: #0095F6;
   
 } */
-.imagePost__upload > input{
+.imagePost__upload>input {
 
   padding: 10px;
 }
-.progress__part{
+
+.progress__part {
   width: 100%;
 }
-.post__comments{
+
+.post__comments {
   font-size: 13px;
 }
-.footer{
+
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -179,4 +187,103 @@
   background-color: black;
   color: white;
   text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+  .img-carousel {
+    display: none;
+  }
+}
+
+/* body {
+  
+} */
+
+.signin-container {
+  /* text-align: center; */
+  display: flex;
+  background-color: #e8ecef;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.home__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin {
+  /* border: 1px solid rgba(0, 0, 0, 0.3); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 5rem;
+}
+
+.carousel-item img {
+  width: 85%;
+  object-fit: contain;
+  height: 100%;
+  position: relative;
+  left: 2px;
+}
+
+.img-carousel {
+  background-image: url("./phone-cover.png");
+  width: 279px;
+  height: 550px;
+  margin-right: 1.5rem;
+}
+
+.carousel-item {
+  border-radius: 2px;
+  height: 615px;
+  position: relative;
+  bottom: 2rem;
+  width: 86%;
+  left: 1.3rem;
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  display: none;
+}
+.register__button{
+  padding: 0.5rem 2rem;
+  background-color: black;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+.register__button:hover{
+  background-color: rgba(0, 0,0, 0.9);
+}
+.login__button{
+  padding: 0.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: black;
+}
+.login__button:hover{
+  background-color: rgba(255, 255, 255, 0.9);
+}
+@media screen and (max-width: 600px){
+  .ig-embed{
+    display: none;
+  }
+  .app__headerSearch{
+    display: none;
+  }
+  .app__headerImage2{
+    display: none;
+  }
 }
