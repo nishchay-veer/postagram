@@ -1,0 +1,18 @@
+body {
+    /* background-color: green; */
+}
+  
+.tag {
+    text-align: center;
+}
+.imgslider{
+    /* height: 50vh;
+    width: 70vw;
+    background-image: url("C:\Users\HP\OneDrive\Desktop\work\work\web dev\Projects\postagram\src\phone-cover.png") ; */
+}
+  
+.slick-slide img {
+    margin: auto;
+    width: 10%;
+    height: 10%;
+}

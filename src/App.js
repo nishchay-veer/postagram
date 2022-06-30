@@ -6,6 +6,7 @@ import MessageIcon from '@mui/icons-material/Message';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import SearchIcon from '@mui/icons-material/Search';
 import Post from './Post';
+// import Login from './Login'
 import { db, auth, storage } from './firebase'
 import firebase from 'firebase/compat/app';
 // import ImagePost from './ImagePost'
@@ -134,155 +135,159 @@ function App() {
 
   };
   return (
-    <div className="app">
-
-      <Modal
-        open={postUpload}
-        onClose={() => setPostUpload(false)}
-      >
-        <Box sx={style}>
-          <div className='imagePost__upload'>
-            <progress className="progress__part" value={progress} max="100" />
-            <textarea wrap='soft' rows='5' className="upload__caption" type="text" placeholder='Enter a caption' value={caption} onChange={(e) => setCaption(e.target.value)} />
-            <input type="file" onChange={handleChange} />
-            <Button onClick={handleUpload}>POST</Button>
-          </div>
+    <div> <div className="app">
 
 
-
-
-
-        </Box>
-      </Modal>
-
-      <Modal
-        open={open}
-        onClose={handleClose}
-      >
-        <Box sx={style}>
-
-
-          <form className='user__details'>
-            <center>
-              <img className="form__image" src="https://www.pngkey.com/png/detail/285-2850733_instagram-logo-instagram-icon-small-png.png" alt="" />
-            </center>
-            <Input type='text' placeholder='username' value={username}
-              onChange={(event) => setUsername(event.target.value)} />
-            <Input type='password' placeholder='password' value={password}
-              onChange={(event) => setPassword(event.target.value)} />
-            <Input type='email' placeholder='emailID' value={emailID}
-              onChange={(event) => setEmailID(event.target.value)} />
-            <Button type='submit' onClick={signUp}>SIGN UP</Button>
-          </form>
+    <Modal
+      open={postUpload}
+      onClose={() => setPostUpload(false)}
+    >
+      <Box sx={style}>
+        <div className='imagePost__upload'>
+          <progress className="progress__part" value={progress} max="100" />
+          <textarea wrap='soft' rows='5' className="upload__caption" type="text" placeholder='Enter a caption' value={caption} onChange={(e) => setCaption(e.target.value)} />
+          <input type="file" onChange={handleChange} />
+          <Button onClick={handleUpload}>POST</Button>
+        </div>
 
 
 
-        </Box>
-      </Modal>
-      <Modal
-        open={openSignIn}
-        onClose={handleCloseIn}
-      >
-        <Box sx={style}>
 
 
-          <form className='user__details'>
-            <center>
-              <img className="form__image" src="https://www.pngkey.com/png/detail/285-2850733_instagram-logo-instagram-icon-small-png.png" alt="" />
-            </center>
-            <Input type='password' placeholder='password' value={password}
-              onChange={(event) => setPassword(event.target.value)} />
-            <Input type='email' placeholder='emailID' value={emailID}
-              onChange={(event) => setEmailID(event.target.value)} />
-            <Button type='submit' onClick={signIn}>SIGN IN</Button>
-          </form>
+      </Box>
+    </Modal>
+
+    <Modal
+      open={open}
+      onClose={handleClose}
+    >
+      <Box sx={style}>
+
+
+        <form className='user__details'>
+          <center>
+            <img className="form__image" src="https://www.pngkey.com/png/detail/285-2850733_instagram-logo-instagram-icon-small-png.png" alt="" />
+          </center>
+          <Input type='text' placeholder='username' value={username}
+            onChange={(event) => setUsername(event.target.value)} />
+          <Input type='password' placeholder='password' value={password}
+            onChange={(event) => setPassword(event.target.value)} />
+          <Input type='email' placeholder='emailID' value={emailID}
+            onChange={(event) => setEmailID(event.target.value)} />
+          <Button type='submit' onClick={signUp}>SIGN UP</Button>
+        </form>
 
 
 
-        </Box>
-      </Modal>
-      <div className="app__header">
-        <div className='images'>
-        <img className="app__headerImage1" src="https://images.ctfassets.net/pjshm78m9jt4/129012_header/05b033cc745de7f12355141aaa8d0063/importedImage129012_header" alt="" />
+      </Box>
+    </Modal>
+    <Modal
+      open={openSignIn}
+      onClose={handleCloseIn}
+    >
+      <Box sx={style}>
+
+
+        <form className='user__details'>
+          <center>
+            <img className="form__image" src="https://www.pngkey.com/png/detail/285-2850733_instagram-logo-instagram-icon-small-png.png" alt="" />
+          </center>
+          <Input type='password' placeholder='password' value={password}
+            onChange={(event) => setPassword(event.target.value)} />
+          <Input type='email' placeholder='emailID' value={emailID}
+            onChange={(event) => setEmailID(event.target.value)} />
+          <Button type='submit' onClick={signIn}>SIGN IN</Button>
+        </form>
+
+
+
+      </Box>
+    </Modal>
+    <div className="app__header">
+      <div className='images'>
+        <img className="app__headerImage1" src="https://firebasestorage.googleapis.com/v0/b/postagram-4574a.appspot.com/o/images%2Fheader_logo.png?alt=media&token=5a5ad043-a4e9-4258-8937-3494ba0b61ecgoogle-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" alt="" />
         <img className="app__headerImage2" src="https://firebasestorage.googleapis.com/v0/b/postagram-4574a.appspot.com/o/images%2FWhatsApp%20Image%202022-06-29%20at%208.00.30%20PM.jpeg?alt=media&token=8487e5be-5698-44f0-b6ca-0ab2efc9aea4" alt="" />
 
-        </div>
+      </div>
 
-        <div className="app__headerSearch">
+      <div className="app__headerSearch">
 
-          <input type="text" placeholder="Search" ></input>
-          <SearchIcon className="search__icon" />
-        </div>
+        <input type="text" placeholder="Search" ></input>
+        <SearchIcon className="search__icon" />
+      </div>
 
-        <div className="app__headerIcons">
-          <IconButton className='icons'>
-            <HomeIcon />
-          </IconButton>
-          <IconButton className='icons'>
-            <MessageIcon />
+      <div className="app__headerIcons">
+        <IconButton className='icons'>
+          <HomeIcon />
+        </IconButton>
+        <IconButton className='icons'>
+          <MessageIcon />
 
-          </IconButton>
+        </IconButton>
 
-          <IconButton className='postIcon'>
-            <AddCircleOutlineIcon onClick={user ? () => setPostUpload(true) : () => setPostUpload(false)} />
+        <IconButton className='postIcon'>
+          <AddCircleOutlineIcon onClick={user ? () => setPostUpload(true) : () => setPostUpload(false)} />
 
-          </IconButton>
+        </IconButton>
 
 
-          <IconButton className='icons'>
-            <Avatar sx={{ height: '30px', width: '30px' }} />
+        <IconButton className='icons'>
+          <Avatar sx={{ height: '30px', width: '30px' }} />
 
-          </IconButton>
-          <div className='login__options'>{user ? <Button onClick={() => auth.signOut()}>LOG OUT</Button> : <div>
-            <Button onClick={handleOpen}>SIGN UP</Button>
-            <Button onClick={handleOpenIn}>SIGN IN</Button>
-          </div>}</div>
-
-        </div>
+        </IconButton>
+        <div className='login__options'>{user ? <Button onClick={() => auth.signOut()}>LOG OUT</Button> : <div>
+          <Button onClick={handleOpen}>SIGN UP</Button>
+          <Button onClick={handleOpenIn}>SIGN IN</Button>
+        </div>}</div>
 
       </div>
-      <div>{!user ? <h3>You need to login to your account to upload a picture...</h3> : null}</div>
-      {/* <div className='postKaro'>{user?.displayName && postUpload ? <ImagePost username={user.displayName} /> : (null)}</div> */}
 
-      <div className='app__posts'>
-        <div className='app__postsLeft'>
-          <div className='posts'>{posts.map(({ id, post }) => (
-            <Post key={id} postID={id} user={user} username={post.username} caption={post.caption} location={post.location} />
-          )
-          )}</div>
+    </div>
+    <div>{!user ? <h3>You need to login to your account to upload a picture...</h3> : null}</div>
+    {/* <div className='postKaro'>{user?.displayName && postUpload ? <ImagePost username={user.displayName} /> : (null)}</div> */}
 
-        </div>
-        <div className='app__postsRight'>
-          <InstagramEmbed
-            className="insta"
-            url='https://www.instagram.com/p/Cb61YFop7d9/'
-            maxWidth={328}
-            hideCaption={false}
-            containerTagName='div'
-            protocol=''
-            injectScript
-            onLoading={() => { }}
-            onSuccess={() => { }}
-            onAfterRender={() => { }}
-            onFailure={() => { }}
-          />
-          <InstagramEmbed
-            className="insta"
-            url='https://www.instagram.com/p/Cc7NeRKJUdD/'
-            maxWidth={328}
-            hideCaption={false}
-            containerTagName='div'
-            protocol=''
-            injectScript
-            onLoading={() => { }}
-            onSuccess={() => { }}
-            onAfterRender={() => { }}
-            onFailure={() => { }}
-          />
-        </div>  </div>
+    <div className='app__posts'>
+      <div className='app__postsLeft'>
+        <div className='posts'>{posts.map(({ id, post }) => (
+          <Post key={id} postID={id} user={user} username={post.username} caption={post.caption} location={post.location} />
+        )
+        )}</div>
+
+      </div>
+      <div className='app__postsRight'>
+        <InstagramEmbed
+          className="insta"
+          url='https://www.instagram.com/p/Cb61YFop7d9/'
+          maxWidth={328}
+          hideCaption={false}
+          containerTagName='div'
+          protocol=''
+          injectScript
+          onLoading={() => { }}
+          onSuccess={() => { }}
+          onAfterRender={() => { }}
+          onFailure={() => { }}
+        />
+        <InstagramEmbed
+          className="insta"
+          url='https://www.instagram.com/p/Cc7NeRKJUdD/'
+          maxWidth={328}
+          hideCaption={false}
+          containerTagName='div'
+          protocol=''
+          injectScript
+          onLoading={() => { }}
+          onSuccess={() => { }}
+          onAfterRender={() => { }}
+          onFailure={() => { }}
+        />
+      </div>  </div>
 
 
-      <div className='footer'>Copyright &copy; 2022 by Nishchay Veer and Mridul Dhiman</div>
+    <div className='footer'>Copyright &copy; 2022 by Nishchay Veer and Mridul Dhiman</div>
+  </div> 
+
+      
     </div>
 
   );

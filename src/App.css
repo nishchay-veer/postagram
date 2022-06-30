@@ -39,7 +39,8 @@
 }
 
 .app__headerImage1 {
-  height: 50px;
+  object-fit: contain;
+  width: 70px;
 }
 .app__headerImage2 {
   height: 60px;
@@ -173,7 +174,7 @@
   position: fixed;
   left: 0;
   bottom: 0;
-  padding: 5px;
+  padding: 20px;
   width: 100%;
   background-color: black;
   color: white;
