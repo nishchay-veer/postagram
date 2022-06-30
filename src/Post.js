@@ -100,15 +100,15 @@ function Post({ postID, user, username, caption, location }) {
             </h4>
             {comments.length > 2 ? (showComments ? <button onClick={showComm}>Show less comments</button>: <button onClick={showComm}>Show all comments</button>) : null}
             <div className='post__comments'>{showComments ? <div>{
-                comments.map((comm) => (<p>
+                comments.map((comm) => (<p className='post_comment'>
                     <strong>{comm.username}</strong> {comm.comment}
                 </p>)
 
                 )
             }
             </div> : <div>
-                <p><strong>{comments[0]?.username}</strong> {comments[0]?.comment}</p>
-                <p><strong>{comments[1]?.username}</strong> {comments[1]?.comment}</p>
+                <p className='show'><strong>{comments[0]?.username}</strong> {comments[0]?.comment}</p>
+                <p className='show'><strong>{comments[1]?.username}</strong> {comments[1]?.comment}</p>
                 </div>}
                 </div>
 

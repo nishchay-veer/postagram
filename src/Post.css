@@ -5,12 +5,17 @@
     margin-bottom: 40px;
 }
 .post__header{
+    /* font-size: 20px; */
     background-color: white;
     border-bottom: 1px solid lightgray;
     padding: 20px;
     display: flex;
     align-items: center;
 
+}
+.post__header > h4{
+    font-weight: bold;
+    font-size: 18px;
 }
 .post__avatar{
     margin-right: 5px;
@@ -26,12 +31,21 @@
     margin-left: 10px;
 }
 .post__text{
+    font-size: 18px;
     padding: 10px;
     font-weight: normal;
     border-bottom: 1px solid lightgray;
 }
 .post__comments{
+    /* border: 1px solid black; */
     padding: 10px;
+}
+.show{
+    margin-bottom: 0px;
+}
+.post_comment{
+    margin-bottom: 2px;
+    /* border: 1px solid black; */
 }
 .post__icons{
     padding: 10px;
